@@ -1,12 +1,18 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, Header } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Header 
+        leftComponent={{ icon: 'menu', color: '#fff' }}
+        centerComponent={{ Text: 'Organic Leaf', style: { color: '#fff' }}}
+        rightComponent={{ icon: 'home', color: '#fff' }}></Header>
+        <Text>Open up App.js to start working on your app!</Text>
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
