@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Header } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default class App extends Component {
+export default class HomeScreen extends Component {
+
   render() {
     return (
       <View style={styles.container}>
-        <Header 
-        leftComponent={{ icon: 'menu', color: '#fff' }}
-        centerComponent={{ Text: 'Organic Leaf', style: { color: '#fff' }}}
-        rightComponent={{ icon: 'home', color: '#fff' }}></Header>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text>HomeScreen</Text>
+      </View>
+    );
+  }
+}
+
+export default class TeaScreen extends Component {
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text>HomeScreen</Text>
       </View>
     );
   }
