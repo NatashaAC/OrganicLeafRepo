@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default class HomeScreen extends Component {
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>HomeScreen</Text>
-      </View>
-    );
-  }
-}
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default class TeaScreen extends Component {
 
   render() {
     return (
       <View style={styles.container}>
-        <Text>HomeScreen</Text>
+        <Text>Tea Screen</Text>
+        <Image src={required('../assets/energy1.jpg')}
+        style={{width: 200, height:200}}></Image>
       </View>
     );
   }
