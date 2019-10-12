@@ -1,24 +1,10 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
-export default class TeaScreen extends Component {
+import TeaScreen from './teasScreen.js';
 
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Tea Screen</Text>
-        <Image src={required('../assets/energy1.jpg')}
-        style={{width: 200, height:200}}></Image>
-      </View>
-    );
-  }
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+const stackNavigator = createStackNavigator({
+  Teas: TeaScreen
 });
+
+export default createAppContainer(stackNavigator);
