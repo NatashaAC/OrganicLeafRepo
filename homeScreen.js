@@ -21,7 +21,7 @@ export default class HomeScreen extends Component {
                   () =>
                   this.props.navigation.navigate('Teas')
               }
-              title="press me"></Button>
+              title="View Teas"></Button>
           </View>
       );
   }
