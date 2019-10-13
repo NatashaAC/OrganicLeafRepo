@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { StyleSheet, Image, Text, ScrollView } from 'react-native';
+import { StyleSheet, Text, Button, ScrollView } from 'react-native';
+
+import { Card } from 'react-native-elements';
 
 export default class TeaScreen extends Component {
     static navigationOptions = {
@@ -16,9 +18,42 @@ export default class TeaScreen extends Component {
 
   render() {
     return (
-        <ScrollView>
-        <Image source={require('./assets/detox1.jpg')} style={styles.image}></Image>
-        <Text style={{marginBottom: 10}}>Enjoy a a clear out with this tea</Text>
+        <ScrollView style={styles.container}>
+            <Card 
+                title='Detox Tea'
+                image={require('./assets/detox1.jpg')} style={styles.image}>
+                <Text style={styles.textStyle}>Enjoy a a clear out with this tea!</Text>
+                <Button
+                    title='ADD TO CART'></Button>
+            </Card>
+            <Card 
+                title='Digestion Tea'
+                image={require('./assets/digestion2.jpg')} style={styles.image}>
+                <Text style={styles.textStyle}>Soothe your stomach with this tea!</Text>
+                <Button
+                    title='ADD TO CART'></Button>
+            </Card>
+            <Card 
+                title='Energy Tea'
+                image={require('./assets/energy1.jpg')} style={styles.image}>
+                <Text style={styles.textStyle}>Wake up with this tea!</Text>
+                <Button
+                    title='ADD TO CART'></Button>
+            </Card>
+            <Card 
+                title='Relax Tea'
+                image={require('./assets/relax4.jpg')} style={styles.image}>
+                <Text style={styles.textStyle}>Relax with this tea</Text>
+                <Button
+                    title='ADD TO CART'></Button>
+            </Card>
+            <Card 
+                title='Immunity Tea'
+                image={require('./assets/immunity2.jpg')} style={styles.image}>
+                <Text style={styles.textStyle}>Boost your immune system this tea</Text>
+                <Button
+                    title='ADD TO CART'></Button>
+            </Card>
         </ScrollView>
     );
   }
@@ -31,7 +66,12 @@ const styles = StyleSheet.create({
     alignContent: 'center'
   },
   image: {
-      width: 150,
-      height: 150
+      resizeMode: 'contain',
+      width: 25,
+      height: 25
+  },
+  textStyle: {
+    margin: 20,
+    textAlign: 'center'
   }
 });
